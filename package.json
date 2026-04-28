@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/dohaicuong/create-home.git"
   },
+  "bin": "./dist/index.mjs",
   "files": [
     "dist"
   ],
