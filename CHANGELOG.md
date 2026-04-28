@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/dohaicuong/create-home/compare/v1.0.0...v1.0.1) (2026-04-28)
+
+### Bug Fixes
+
+- create cli bin ([41da5d7](https://github.com/dohaicuong/create-home/commit/41da5d7b076903bc4a2752f919ebc789c13c56a1))
+
 # 1.0.0 (2026-04-28)
 
 ### Bug Fixes
