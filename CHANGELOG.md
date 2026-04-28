@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/dohaicuong/create-home/compare/v1.0.3...v1.0.4) (2026-04-28)
+
+### Bug Fixes
+
+- some small clean up ([55ce6e5](https://github.com/dohaicuong/create-home/commit/55ce6e5f53100f66ae9cc0ed4e6f5d1097c7a1dc))
+
 ## [1.0.3](https://github.com/dohaicuong/create-home/compare/v1.0.2...v1.0.3) (2026-04-28)
 
 ### Bug Fixes
