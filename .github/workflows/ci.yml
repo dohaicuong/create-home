@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions: {}
+
+jobs:
+  ci:
+    timeout-minutes: 15
+
+    strategy:
+      fail-fast: false
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: voidzero-dev/setup-vp@v1
+        with:
+          cache: true
+      - uses: actions/checkout@v6
+      - run: vp install
+      - run: vp check
+      - run: vp pack

@@ -1,6 +1,7 @@
-# vite-plus-starter
+# create-home
 
-A starter for creating a Vite Plus project.
+create-home cli help with create home service and app
+(clone of create-vite)
 
 ## Development
 
