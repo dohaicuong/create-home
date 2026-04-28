@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dohaicuong/create-home/compare/v1.0.1...v1.0.2) (2026-04-28)
+
+### Bug Fixes
+
+- include template directories in package ([a53a918](https://github.com/dohaicuong/create-home/commit/a53a918cb7425a862e8849f1dd13012d127b8f61))
+- include templates ([f983149](https://github.com/dohaicuong/create-home/commit/f983149e2c0d16b301c077475e99ed7bae0a91a9))
+
 ## [1.0.1](https://github.com/dohaicuong/create-home/compare/v1.0.0...v1.0.1) (2026-04-28)
 
 ### Bug Fixes
