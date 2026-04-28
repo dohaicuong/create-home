@@ -1,0 +1,5 @@
+{
+  "name": "template-openapi-mongo",
+  "version": "0.0.1",
+  "description": "Starter template for openapi service with mongoDB."
+}
