@@ -10,7 +10,7 @@
   "author": "dohaicuong",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com:dohaicuong/create-home.git"
+    "url": "git+https://github.com/dohaicuong/create-home.git"
   },
   "files": [
     "dist"
