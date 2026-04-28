@@ -6,15 +6,15 @@ import * as prompts from '@clack/prompts'
 import { determineAgent } from '@vercel/detect-agent'
 import mri from 'mri'
 
-import { createColors, type ColorFunc } from './create-color.ts'
-import { formatTargetDir, isEmptyDir, emptyDir } from './dir-utils.ts'
-import { pkgFromUserAgent } from './pkg-from-user-agent.ts'
-import { isValidPackageName, toValidPackageName } from './valid-package-name.ts'
-import { write } from './write.ts'
+import { formatTargetDir, isEmptyDir, emptyDir } from './_dir-utils.ts'
+import { pkgFromUserAgent } from './_pkg-from-user-agent.ts'
+import {
+  isValidPackageName,
+  toValidPackageName,
+} from './_valid-package-name.ts'
+import { write } from './_write.ts'
+import { TEMPLATES } from './TEMPLATES.ts'
 
-const { green } = createColors()
-
-// prettier-ignore
 const helpMessage = `\
 Usage: create-home [OPTION]... [DIRECTORY]
 
@@ -24,39 +24,9 @@ Options:
   -t, --template NAME                   use a specific template
 
 Available templates:
-${green     ('openapi             Base OpenAPI'           )}
-${green     ('openapi-mongo       OpenAPI with MongoDB'   )}`
-
-type Template = {
-  name: string
-  display: string
-  color: ColorFunc
-  variants: FrameworkVariant[]
-}
-type FrameworkVariant = {
-  name: string
-  display: string
-  color: ColorFunc
-}
-const TEMPLATES: Template[] = [
-  {
-    name: 'openapi',
-    display: 'OpenAPI',
-    color: green,
-    variants: [
-      {
-        name: 'openapi',
-        display: 'Base OpenAPI',
-        color: green,
-      },
-      {
-        name: 'openapi-mongo',
-        display: 'OpenAPI with mongoDB',
-        color: green,
-      },
-    ],
-  },
-]
+${TEMPLATES.flatMap((t) =>
+  t.variants.map((v) => `  ${v.color(v.name.padEnd(20))}${v.display}`),
+).join('\n')}`
 
 const argv = mri<{
   help?: boolean
@@ -224,7 +194,7 @@ async function init() {
 
   // 5.
   const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent)
-  const pkgManager = pkgInfo ? pkgInfo.name : 'npm'
+  const pkgManager = pkgInfo ? pkgInfo.name : 'pnpm'
 
   // CREATE PROJECT WITH TEMPLATE
   const root = path.join(cwd, targetDir)
