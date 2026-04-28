@@ -15,7 +15,8 @@
   "bin": "./dist/index.mjs",
   "files": [
     "dist",
-    "template-*"
+    "template-openapi",
+    "template-openapi-mongo"
   ],
   "type": "module",
   "main": "./dist/index.mjs",
