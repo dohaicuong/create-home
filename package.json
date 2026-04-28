@@ -7,10 +7,10 @@
     "url": "https://github.com/dohaicuong/create-home/issues"
   },
   "license": "MIT",
-  "author": "Eric Do <beatyshot@gmail.com>",
+  "author": "dohaicuong",
   "repository": {
     "type": "git",
-    "url": "git@github.com:dohaicuong/create-home.git"
+    "url": "git+https://github.com:dohaicuong/create-home.git"
   },
   "files": [
     "dist"
