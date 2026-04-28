@@ -1,7 +1,7 @@
-import util from "node:util";
+import util from 'node:util'
 
-type ColorName = Exclude<Parameters<typeof util.styleText>[0], any[]>;
-export type ColorFunc = (str: string) => string;
+type ColorName = Exclude<Parameters<typeof util.styleText>[0], any[]>
+export type ColorFunc = (str: string) => string
 
 export function createColors() {
   // @ts-ignore
@@ -9,7 +9,7 @@ export function createColors() {
     // @ts-ignore
     get(_, prop: ColorName) {
       // eslint-disable-next-line n/no-unsupported-features/node-builtins -- our supported nodejs range supports `styleText` but in experimental state, which is fine
-      return (str: string) => util.styleText(prop, str);
+      return (str: string) => util.styleText(prop, str)
     },
-  });
+  })
 }
